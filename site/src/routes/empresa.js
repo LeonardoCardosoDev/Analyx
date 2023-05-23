@@ -11,11 +11,11 @@ router.get("/listar", function (req, res) {
     empresaController.listar(req, res);
 });
 
-router.get("/pegarEmpresa/:id", function (req, res) {
-    empresaController.getEmpresa(req, res);
+router.post("/pegarEmpresa", function (req, res) {
+    empresaController.pegarEmpresa(req, res);
 });
 
-router.put("/alterar/:id", function (req, res) {
+router.put("/alterar/", function (req, res) {
     empresaController.alterar(req, res);
 });
 

@@ -10,15 +10,29 @@
     cursor: pointer;
 }
 
-/* left-menu */
-.left-menu {
+/* right-menu */
+.right-menu {
     width: 15%;
     display: none;
     padding-top: 1%;
-    background-color: #496B8E;
+    background-color: #0E1533;
     color: white;
     position: absolute;
     z-index: 1000000000000;
+    left: 85%;
+    -webkit-animation: animate-div .5s;
+}
+
+@-webkit-keyframes animate-div {
+    from {
+        opacity: 0;
+        margin-top: -150px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
 }
 
 .icons {
@@ -33,6 +47,7 @@
         margin-bottom: 2em;
     }
 }
+
 @media screen and (max-width: 1700px) {
     .icons {
         margin-bottom: 1em;
@@ -138,7 +153,7 @@
 .names-align {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .names-align:hover {
@@ -180,11 +195,11 @@
 .content {
     width: 100%;
     height: 100vh;
-    background-color: #304F73;
+    background-color: #101923;
 }
 
 .header {
-    background-color: #274360;
+    background-color: #09121C;
 }
 
 .menu {
@@ -217,7 +232,7 @@
 }
 
 .return i {
-    margin-left: 8%;
+    margin-right: 8%;
     font-size: 1.8em;
 }
 
@@ -230,7 +245,7 @@
 
 /* dashboard */
 
-@media screen and (max-width: 1920px){
+@media screen and (max-width: 1920px) {
     .analytics {
         margin-top: 6em;
     }
@@ -238,16 +253,17 @@
     .card-align {
         margin-bottom: 5em;
     }
-} 
+}
 
-@media screen and (max-width: 1700px){
+@media screen and (max-width: 1700px) {
     .analytics {
-        margin-top: 2.2em;
+        margin-top: 1.5em;
     }
+
     .card-align {
         margin-bottom: 1em;
     }
-} 
+}
 
 .analytics .container {
     width: 90%;
@@ -262,12 +278,12 @@
 
 .card {
     width: 25%;
-    background-color: #274360;
+    background-color: #09121C;
     color: white;
     border-radius: 25px;
     padding: 0.8%;
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
 }
 
 .card:hover {
@@ -317,29 +333,21 @@
     margin-top: 0.5em;
 }
 
-#discValue {
+#disc_grafic {
     margin-right: 10px;
 }
 
 @media screen and (max-width: 1920px) {
-    #discValue {
-        font-size: 2.5em;
+    #discText {
+        font-size: 2.0em;
     }
 }
 
 @media screen and (max-width: 1390px) {
-    #discValue {
-        font-size: 2em;
+    #discText {
+        font-size: 1.5em;
     }
 }
-
-@media screen and (max-width: 1390px) {
-    #discValue {
-        font-size: 1.8em;
-    }
-}
-
-
 
 #cpu_check,
 #cpu_alert,
@@ -382,19 +390,19 @@
 
 .latency {
     color: white;
-    border-radius: 15px;
-    left: 45%;
-    padding: 1.5em;
+    margin-top: 2em;
 }
 
 .latency-escope {
     color: white;
-    background-color: #3d6085;
     border-radius: 15px;
+    padding: 0.5em 0.8em 0.8em 0.8em;
     position: absolute;
-    left: 43%;
-    padding: 1em 1.5em 1.5em 1.5em;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    right: 5%;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 15px;
+    background-image: linear-gradient(45deg, #0E1533, #09121C);
 }
 
 .latency-escope .title {
@@ -407,91 +415,96 @@
     font-size: 2em;
 }
 
-#latencyValue {
+#latencyText {
     font-size: 1.5em;
 }
 
-
-/* dowloads values */
-
-.download {
-    background-color: #274360;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    width: 37%;
+/* package */
+.package {
+    background-color: #09121C;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 0.8%;
+    border-radius: 15px;
     color: white;
+    width: 95%;
+    min-height: 200px;
+    height: 200px;
+}
+
+.package-align {
+    width: 100%;
+}
+
+
+.scroll {
     overflow: hidden;
     overflow-y: scroll;
+    height: 120px;
 }
 
-
-.download .title {
-    margin-top: 1em;
-}
-
-.download::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
     width: 8px;
     background-color: #274360;
     border-radius: 10px
 }
 
-.download::-webkit-scrollbar-thumb {
+.scroll::-webkit-scrollbar-thumb {
     background-color: #3d6085;
     border-radius: 10px;
 }
 
+.package-title {
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.values-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.values-title h1 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.package-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    /* background-color: #0E1533; */
+    background-image: linear-gradient(45deg, #0E1533, #09121C);
+    padding: 0.5em 0 0.5em 0;
+    margin-top: 0.5em;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.package-values p {
+    font-size: 1em;
+}
+
+
+/* .package-values p:first-child {
+    margin-left: 5%;
+}
+
+.package-values p:last-child {
+    margin-left: 5%;
+} */
+
 
 @media screen and (max-width: 1920px) {
-    .download {
-        padding: 1.5em;
-        font-size: 1.2em;
-        height: 250px;
-    }
-
-    .download .title {
-        margin-top: 5em;
+    .package {
+        margin-top: 8em;
+        min-height: 300px;
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .download {
-        padding: 1.3em;
-        font-size: 1em;
-        height: 200px;
+@media screen and (max-width: 1700px) {
+    .package {
+        margin-top: 6em;
+        min-height: 200px;
     }
-}
-
-.columns-align {
-    display: flex;
-}
-
-.columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.columns:not(:last-child) {
-    margin-inline-end: 0.60em;
-    /* border: red 3px solid; */
-}
-
-.columns:not(:first-child) {
-    border-left: solid 1px;
-    padding: 0.60em;
-    border-image: linear-gradient(to bottom, #274360, #eee, #274360) 1 100%;
-}
-
-.columns p:not(:first-child) {
-    margin-bottom: 0.3em;
-}
-
-.columns h1 {
-    font-size: 1.5em;
-    margin-bottom: 0.3em;
 }
